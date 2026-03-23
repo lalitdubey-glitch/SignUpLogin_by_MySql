@@ -1,0 +1,106 @@
+﻿
+
+<h2 class="text-success">Sign Up</h2>
+
+<div class="container-fluid">
+   <form id="signup" enctype="multipart/form-data">
+        <div class="row">
+            <input type="text" hidden name="id" id="id" readonly class="form-control w-25"/>
+            <div class="col-12">
+                <label for="name">Name</label>
+                <input type="text" placeholder="Enter Your Name" name="name" id="name" maxlength="30" required class="form-control" />
+                <span class="text-danger">Your Name..?</span>
+
+                <label>Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter Your Email" required class="form-control" />
+                <span class="text-danger">Your Email..?</span>
+
+                <label>Password</label>
+                <div class="input-group">
+                    <input type="password" name="pass" id="pass" placeholder="Enter Your Password" required class="form-control" />
+                    <input type="button" value="show" id="ShowHidePass" class="btn btn-outline-secondary"/>
+                </div>
+                <span class="text-danger">Your Password..?</span>
+
+               <label>Mobile Number</label>
+               <div class="input-group"> 
+                   <span class="input-group-text">+91</span>
+                    <input type="tel" name="mob" id="mob" maxlength="10" placeholder="Enter Your Mobile Number" pattern="[0-9]{10}" class="form-control" />
+               </div>
+
+               <label for="dobs">Date Of Birth</label> 
+               <input type="date" name="dob" id="dob"  class="form-control" />
+              
+                <label>Profile Image</label>
+                <input type="file" name="img" id="img" accept="image/*" class="form-control img-fluid mb-3" />
+                <img src="" id="ShowPrv" style="display:none;" height="100px" width="100px" class="row img-thumbnail"/>
+
+                <label>Gender</label>
+                <div>
+                    <input type="radio" class="form-check-input" name="gender" id="male" value="male" /> Male
+                    <input type="radio" class="form-check-input" name="gender" id="female" value="female" /> Female
+                    <input type="radio" class="form-check-input" name="gender" id="other" value="other" /> Other
+                </div>
+
+                <label>Hobby</label>
+                <div>
+                    <input type="checkbox" class="form-check-input" name="hobby" id="cricket" value="cricket" /> Cricket
+                    <input type="checkbox" class="form-check-input" name="hobby" id="football" value="football" /> Football
+                    <input type="checkbox" class="form-check-input" name="hobby" id="carrom" value="carrom" /> Carrom
+                    <input type="checkbox" class="form-check-input" name="hobby" id="chess" value="chess" /> Chess
+                </div>
+
+                <label>Profession</label>
+                <select class="form-select mb-3" id="profession" name="profession">
+                    <option disabled selected>Please select profession</option>
+                    <option value="developer">Developer</option>
+                    <option value="designer">Designer</option>
+                </select>
+                 
+                <div class="input-group my-2">
+                    <span class="input-group-text">Pincode</span>
+                    <input type="number" placeholder="Enter Pincode" name="pincode" id="pincode" class="form-control " />
+                    <button class="btn btn-outline-info me-2" id="fetchPin" type="button">Fetch</button>
+                    <span class="input-group-text">State</span>
+                    <input type="text" name="state" readonly id="state" class="form-control" />
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">District</span>
+                   <input type="text" class="form-control me-2" readonly name="dist" id="dist"/>
+                    <span class="input-group-text">Village</span>
+                    <select class="form-select" name="vill" id="vill"></select>
+                </div> 
+               
+
+                <input type="button" value="Sign Up" id="save" class="btn btn-outline-success form-control my-3 w-25"/>
+
+            </div>
+        </div>
+   </form>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped" id="table">
+        <thead>
+            <tr>
+                <th>Sr</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Gender</th>
+                <th>Hobby</th>
+                <th>Image</th> 
+                <th>Pincode</th>
+                <th>Profession</th>
+                <th>State</th>
+                <th>District</th>
+                <th>Village</th>
+                <th>DOB</th>
+                <th>RegDate</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>  </tbody>
+    </table>
+</div>
